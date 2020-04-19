@@ -20,3 +20,16 @@ const alunos = [
         media: 8.2
     }
 ];
+// const novasMedias = alunos.map(({ media }) => media + 2);
+// const novasMedias = alunos.map(aluno => aluno.media + 2);
+/*var novasMedias = alunos.map(function(aluno){
+    return aluno.media + 2;
+});*/
+
+const novasMedias = alunos.map(({ media }) => {
+    if(media <= 8) return media + 2;
+
+    return 10;
+});
+
+console.log(novasMedias); // Saída [ 7.25, 8.9, 4.8, 10, 10 ]
